@@ -7,9 +7,9 @@ router.get('/', async (req, res, next) => {
   try {
     const users = await User.find({});
     console.log(users)
-    // res.send("Hello, world.")
-    // console.log(res.render)
-    res.render('mongoose', { users });
+    // res.send("<h1>Hello, world.</h1>")
+    
+    res.render('mongoose', {users});
   } catch (err) {
     console.error(err);
     next(err);
